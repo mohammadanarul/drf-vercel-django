@@ -1,1 +1,1 @@
-# drf-vercel-django
+# How to deploy Vercel Django Project.
