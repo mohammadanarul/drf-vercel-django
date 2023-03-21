@@ -32,9 +32,10 @@ def create_task_view(request):
     if serializer.is_valid():
         serializer.save()
         return Response({"success": serializer.data, "status": status.HTTP_201_CREATED})
-    return Response(
-        {"error": "Sorry don't create and todo.", "status": status.HTTP_400_BAD_REQUEST}
-    )
+    else:
+        return Response(
+            {"error": "Sorry don't create todo.", "status": status.HTTP_400_BAD_REQUEST}
+        )
 
 
 @api_view(["GET"])

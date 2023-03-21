@@ -9,7 +9,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path("list/", todo_list_view, name="tasks"),
+    path("", todo_list_view, name="tasks"),
     path("create/", create_task_view, name="task-create"),
     path("<pk>/", todo_detail_view, name="task_detail"),
     path("update/<pk>/", todo_update_view, name="task_update"),
